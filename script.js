@@ -114,16 +114,19 @@ function optimizeCuts() {
     }
     
     // Calculando o desperdício
-    const usedArea = (cutsX * cutWidth) * (cutsY * cutHeight);
-    const totalArea = mantWidth * mantHeight;
-    const waste = totalArea - usedArea;
-    const totalCuts = cutsX * cutsY;
+    const usedArea = ((cutsX * cutWidth) * (cutsY * cutHeight)).toFixed(2);
+    const totalArea = (mantWidth * mantHeight).toFixed(2);
+    const waste = (totalArea - usedArea).toFixed(2);
+    const totalCuts = (cutsX * cutsY);
+
+    const waste_percent = (waste/totalArea*100).toFixed(2);
+    const usedArea_percent = (usedArea/totalArea*100).toFixed(2);
     
     // Exibindo resultados na tela
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = `
-        <p><strong>Área total utilizada:</strong> ${usedArea} cm²</p>
-        <p><strong>Área desperdiçada:</strong> ${waste} cm²</p>
+        <p><strong>Área total utilizada:</strong> ${usedArea_percent}%</p>
+        <p><strong>Área desperdiçada:</strong> ${waste_percent}%</p>
         <p><strong>Total de cortes possíveis:</strong> ${totalCuts}</p>
     `;
     
