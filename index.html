@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otimização de Cortes de Manta</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Otimização de Cortes de Manta</h1>
+
+        <div id="inputForm">
+            <label for="mantWidth">Largura da Manta (em cm):</label>
+            <input type="number" id="mantWidth" placeholder="Ex: 200" required>
+
+            <label for="mantHeight">Altura da Manta (em cm):</label>
+            <input type="number" id="mantHeight" placeholder="Ex: 300" required>
+
+            <label for="cutWidth">Largura do Corte (em cm):</label>
+            <input type="number" id="cutWidth" placeholder="Ex: 50" required>
+
+            <label for="cutHeight">Altura do Corte (em cm):</label>
+            <input type="number" id="cutHeight" placeholder="Ex: 50" required>
+
+            <button onclick="optimizeCuts()">Otimizar Cortes</button>
+
+            <!-- Div para exibir todas as mensagens de erro -->
+            <div id="errorMessages" class="error-message"></div>
+        </div>
+
+        <!-- Novo div para exibir os resultados -->
+        <div id="results" class="results"></div>
+
+        <div class="canvas-container">
+            <canvas id="mantCanvas"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

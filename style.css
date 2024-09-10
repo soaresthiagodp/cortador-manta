@@ -1,0 +1,113 @@
+/* Estilos globais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #0077b6;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Estilos do formulário */
+#inputForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#inputForm label {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#inputForm input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#inputForm button {
+    grid-column: span 2;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#inputForm button:hover {
+    background-color: #005f99;
+}
+
+/* Estilos do canvas */
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+canvas {
+    border: 2px solid #0077b6;
+    background-color: #e0f7fa;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #inputForm {
+        grid-template-columns: 1fr;
+    }
+
+    canvas {
+        width: 100%;
+    }
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 10px;
+    display: none; /* Inicialmente oculta */
+}
+
+.input-error {
+    border-color: red;
+}
+
+.results {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.results p {
+    margin: 5px 0;
+}
