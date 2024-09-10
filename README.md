@@ -22,8 +22,8 @@ Este projeto é uma aplicação web que ajuda a otimizar o corte de uma manta, m
 
 1. **Clone o Repositório**:
     ```bash
-    git clone https://github.com/soaresthiagodp/cortador-manta.git
-    cd cortador-manta
+    git clone https://github.com/soaresthiagodp/otimizador-corte.git
+    cd otimizador-corte
     ```
 
 2. **Abra o Arquivo HTML**:
